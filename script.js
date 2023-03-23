@@ -1,3 +1,4 @@
+console.log(window.innerWidth);
 let audioturn=new Audio()
 let gameover=new Audio()
 
@@ -30,8 +31,11 @@ if((boxText[e[0]].innerText===boxText[e[1]].innerText) &&(boxText[e[2]].innerTex
     isgameover=true;
     //bring the dancing sticker 
     document.querySelector('.imagebox').getElementsByTagName('img')[0].style.width='200px'
-    document.querySelector(".line").style.width="20vw"
+    
+    if(window.innerWidth>950){
+        document.querySelector(".line").style.width="20vw"
     document.querySelector(".line").style.transform=`translate(${e[3]}vw,${e[4]}vw) rotate(${e[5]}deg) `
+}
 
 }
     })
